@@ -1,0 +1,112 @@
+.whole-question {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem;
+ }
+
+ .droppable {
+    border-bottom: 1px dashed #000; /* Adjust thickness and color as needed */
+    width: 100px; /* Adjust width as needed */
+    margin-bottom: 1px; /* Adjust margin as needed */
+    height: 50px;
+}
+
+
+.question-wrapper {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.draggable-elements {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.question, .draggable-elements {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #eee;
+  color: #111;
+}
+
+.draggable-elements {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.draggable {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 0rem 0.5rem;
+    cursor: move;
+    transition: opacity 0.2s;
+}
+
+/* Rest of your CSS styles remain unchanged */
+
+.draggable:hover {
+  opacity: 0.5;
+}
+
+
+.droppable span {
+  pointer-events: none; /* The element is never the target of pointer events */
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+  /* background-color: #bee3f0; */
+  border-width: 5px;
+  transform: scale(1.1);
+}
+
+.droppable.dropped span {
+  font-size: 1rem;
+  color: blue;
+  margin-top: 0.5rem;
+}
+
+
+.dropped-correct {
+    font-size: 1.5rem;
+    color: blue;
+    margin-top: 0.5rem;
+  }
+
+.dropped-wrong {
+    font-size: 1.5rem;
+    color: red;
+    margin-top: 0.5rem;
+}
+
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
+
+@media (max-width: 600px) {
+  html { font-size: 14px; }
+  .draggable-elements { margin: 1.5rem; }
+}
