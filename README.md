@@ -1,0 +1,1 @@
+this is a drag and drop game where there are sentences with gaps where you are supposed to fill in the answers. if the answer is correct it is highlighted in blue and if the answer is wrong it is highlighted in red. Happy playing
